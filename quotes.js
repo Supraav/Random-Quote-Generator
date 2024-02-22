@@ -28,6 +28,33 @@ const quotes = {
 let currIndex = 0;
 let currCategory = "wisdom";
 
+// font increase/decrease
+var increment = document.getElementById("up");
+var decrement = document.getElementById("down");
+var resize = document.getElementById("resize");
+var fsize = document.getElementById("quotes");
+var step = 2;
+
+fsize.style.fontSize = "20px";
+var defaultFontSize = fsize.style.fontSize;
+resize.onclick = function () {
+  fsize.style.fontSize = defaultFontSize;
+};
+
+increment.onclick = function () {
+  var currentSize = parseInt(fsize.style.fontSize);
+  if (currentSize <= 38) {
+    fsize.style.fontSize = currentSize + step + "px";
+  }
+};
+
+decrement.onclick = function () {
+  var currentSize = parseInt(fsize.style.fontSize);
+  if (currentSize >= 12) {
+    fsize.style.fontSize = currentSize - step + "px";
+  }
+};
+
 // random first quotes in #quotes
 function selectQuotefromArrays() {
   const quotesField = Object.keys(quotes);

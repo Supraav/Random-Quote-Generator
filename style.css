@@ -1,20 +1,28 @@
 body {
   margin: 0px;
   padding: 0px;
+  max-width: 100%;
+}
+
+#container {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+.font {
+  text-align: center;
 }
 
 #quotes {
   background-color: wheat;
+  text-align: center;
 }
 
 #slider {
   display: flex;
-  justify-content: space-between;
+
+  justify-content: space-around;
 }
 
 .categories {
