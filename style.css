@@ -1,0 +1,26 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quotes {
+  background-color: wheat;
+}
+
+#slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories {
+  text-align: center;
+}
+
+.randomize {
+  text-align: center;
+}
