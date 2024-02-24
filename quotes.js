@@ -35,7 +35,7 @@ var resize = document.getElementById("resize");
 var fsize = document.getElementById("quotes");
 var step = 2;
 
-fsize.style.fontSize = "20px";
+fsize.style.fontSize = "26px";
 var defaultFontSize = fsize.style.fontSize;
 resize.onclick = function () {
   fsize.style.fontSize = defaultFontSize;
@@ -135,4 +135,17 @@ function previous() {
   if (currIndex === 0) {
     document.getElementById("previous").disabled = true;
   }
+}
+
+function getTheme() {
+  return document.querySelector("html").getAttribute("theme");
+}
+
+function setTheme(theme) {
+  document.querySelector("html").setAttribute("theme", theme);
+}
+
+function toggleTheme() {
+  if (getTheme() == "light") setTheme("dark");
+  else setTheme("light");
 }
